@@ -5,8 +5,8 @@ using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
-using ContosoUniversity.Site.DAL;
-using ContosoUniversity.Site.Models;
+using ContosoUniversity.Data;
+using ContosoUniversity.Data.Models;
 using ContosoUniversity.Site.ViewModels;
 
 namespace ContosoUniversity.Site.Controllers

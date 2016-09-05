@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using ContosoUniversity.Site.Models;
+using ContosoUniversity.Data.Models;
 
 namespace ContosoUniversity.Site.ViewModels
 {

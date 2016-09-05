@@ -6,8 +6,8 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using System.Web.Mvc;
-using ContosoUniversity.Site.DAL;
-using ContosoUniversity.Site.Models;
+using ContosoUniversity.Data;
+using ContosoUniversity.Data.Models;
 
 namespace ContosoUniversity.Site.Controllers
 {

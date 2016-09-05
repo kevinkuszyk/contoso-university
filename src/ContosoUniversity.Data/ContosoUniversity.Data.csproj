@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FF217E96-CBFB-4CB1-96AF-005D946A1900}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ContosoUniversity.Data</RootNamespace>
+    <AssemblyName>ContosoUniversity.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Migrations\SchoolConfiguration.cs" />
+    <Compile Include="SchoolContext.cs" />
+    <Compile Include="SchoolInitializer.cs" />
+    <Compile Include="Logging\SchoolInterceptorLogging.cs" />
+    <Compile Include="Logging\SchoolInterceptorTransientErrors.cs" />
+    <Compile Include="Migrations\201411021828194_InitialCreate.cs" />
+    <Compile Include="Migrations\201411021828194_InitialCreate.Designer.cs">
+      <DependentUpon>201411021828194_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411021834484_MaxLengthOnNames.cs" />
+    <Compile Include="Migrations\201411021834484_MaxLengthOnNames.Designer.cs">
+      <DependentUpon>201411021834484_MaxLengthOnNames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411021841373_ComplexDataModel.cs" />
+    <Compile Include="Migrations\201411021841373_ComplexDataModel.Designer.cs">
+      <DependentUpon>201411021841373_ComplexDataModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411021957458_DepartmentSP.cs" />
+    <Compile Include="Migrations\201411021957458_DepartmentSP.Designer.cs">
+      <DependentUpon>201411021957458_DepartmentSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411022009135_RowVersion.cs" />
+    <Compile Include="Migrations\201411022009135_RowVersion.Designer.cs">
+      <DependentUpon>201411022009135_RowVersion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411022351064_Inheritance.cs" />
+    <Compile Include="Migrations\201411022351064_Inheritance.Designer.cs">
+      <DependentUpon>201411022351064_Inheritance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\Department.cs" />
+    <Compile Include="Models\Enrollment.cs" />
+    <Compile Include="Models\Instructor.cs" />
+    <Compile Include="Models\OfficeAssignment.cs" />
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\Student.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201411021828194_InitialCreate.resx">
+      <DependentUpon>201411021828194_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411021834484_MaxLengthOnNames.resx">
+      <DependentUpon>201411021834484_MaxLengthOnNames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411021841373_ComplexDataModel.resx">
+      <DependentUpon>201411021841373_ComplexDataModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411021957458_DepartmentSP.resx">
+      <DependentUpon>201411021957458_DepartmentSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411022009135_RowVersion.resx">
+      <DependentUpon>201411022009135_RowVersion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411022351064_Inheritance.resx">
+      <DependentUpon>201411022351064_Inheritance.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ContosoUniversity.Core\ContosoUniversity.Core.csproj">
+      <Project>{a15e0a6b-7e5c-4948-b950-a51cdbe9acf2}</Project>
+      <Name>ContosoUniversity.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
