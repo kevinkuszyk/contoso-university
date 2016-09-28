@@ -53,6 +53,10 @@
     <Compile Include="..\..\SolutionInfo.cs">
       <Link>Properties\SolutionInfo.cs</Link>
     </Compile>
+    <Compile Include="Migrations\201609282048501_SyncModelToDatabase.cs" />
+    <Compile Include="Migrations\201609282048501_SyncModelToDatabase.Designer.cs">
+      <DependentUpon>201609282048501_SyncModelToDatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\SchoolConfiguration.cs" />
     <Compile Include="SchoolContext.cs" />
     <Compile Include="SchoolInitializer.cs" />
@@ -116,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201411022351064_Inheritance.resx">
       <DependentUpon>201411022351064_Inheritance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609282048501_SyncModelToDatabase.resx">
+      <DependentUpon>201609282048501_SyncModelToDatabase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
