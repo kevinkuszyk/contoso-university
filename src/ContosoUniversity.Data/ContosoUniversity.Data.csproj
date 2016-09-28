@@ -100,6 +100,8 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="ContosoUniversity.Data.nuspec" />
+    <None Include="Deploy.ps1" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -132,6 +134,10 @@
       <Project>{a15e0a6b-7e5c-4948-b950-a51cdbe9acf2}</Project>
       <Name>ContosoUniversity.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="sql\create-database.sql" />
+    <Content Include="sql\set-database-permissions.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\..\packages\OctoPack.3.4.1\tools\OctoPack.targets" Condition="Exists('..\..\packages\OctoPack.3.4.1\tools\OctoPack.targets')" />

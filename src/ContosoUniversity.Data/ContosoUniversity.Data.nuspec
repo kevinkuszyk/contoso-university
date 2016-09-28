@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>ContosoUniversity.Data</id>
+    <version>$version$</version>
+    <authors>Kevin Kuszyk</authors>
+    <description>ContosoUniversity.Data deplopyment package</description>
+  </metadata>
+  <files>
+    <file src="bin\release\*.*"/>
+    <file src="..\..\packages\EntityFramework.6.1.1\tools\migrate.exe" />
+    <file src="*.ps1" />
+    <file src="sql\*.sql" target="sql" />
+  </files>
+</package>
