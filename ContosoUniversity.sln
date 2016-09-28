@@ -15,6 +15,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{56CC994E-EA6
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{48DC63AC-3C5A-44EE-BDD6-E5FD05EB926F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{F77CDD97-10BC-4B1F-9A86-342F0D781D0D}"
+	ProjectSection(SolutionItems) = preProject
+		build\VersionStamp.msbuild = build\VersionStamp.msbuild
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

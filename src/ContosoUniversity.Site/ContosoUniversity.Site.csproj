@@ -22,6 +22,8 @@
     <IISExpressUseClassicPipelineMode />
     <ApplicationInsightsResourceId>/subscriptions/aeb4ae60-b7cb-4f3d-966d-fa43b6607f30/resourcegroups/Default-ApplicationInsights-CentralUS/providers/microsoft.insights/components/ContosoUniversity</ApplicationInsightsResourceId>
     <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -208,7 +210,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
@@ -249,6 +253,13 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="..\..\packages\MSBuildTasks.1.5.0.196\build\MSBuildTasks.targets" Condition="Exists('..\..\packages\MSBuildTasks.1.5.0.196\build\MSBuildTasks.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\MSBuildTasks.1.5.0.196\build\MSBuildTasks.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\MSBuildTasks.1.5.0.196\build\MSBuildTasks.targets'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
